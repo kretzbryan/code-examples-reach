@@ -19,7 +19,7 @@ export default function returnItemFields(item, keys) {
 			return null;
 		}
 		// if the current key argument is found in keyMap, save to results
-		if (keyMap[currentKey]) {
+		if (keyMap[currentKey] && !results[currentKey]) {
 			results[currentKey] = item;
 			foundKeys.push(currentKey);
 			return null;
